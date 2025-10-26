@@ -43,10 +43,10 @@
 <br>
 
 ### *C.　Service List*
-|**項目**|**位置**|
-|:--:|:--:|
-| GitLab | [8090](http:127.0.0.1:8090) |
-| Airflow | [8100](http:127.0.0.1:8100) |
+|**項目**|**服務位置**|**部署方式**|
+|:--:|:- -:|:--:|
+| GitLab | [8090](http:127.0.0.1:8090) | [Step.md](./GitLab/README.md) |
+| Airflow | [8100](http:127.0.0.1:8100) | [Step.md](./Airflow/README.md) |
 
 <br>
 
