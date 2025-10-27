@@ -24,6 +24,8 @@
   sudo apt install python3.12-venv
   sudo python3 -m venv airflow_venv
   source airflow_venv/bin/activate
+  # 此時目錄應為 : //wsl$/Ubuntu/home/pc
+  # 創建虛擬環境位置為 : //wsl$/Ubuntu/home/pc/airflow_venv
   ```
 - ![PNG](../../sample/linux_airflow_venv.PNG)
 
@@ -66,6 +68,7 @@
   ```bash
   nano airflow/airflow.cfg
   # web_server_port = 8080 # <-- 改為 8150
+  # 可用 VSCode 編譯器編輯
   ```
   
 - #### *啟動 Airflow*
@@ -86,6 +89,7 @@
 - ![PNG](../../sample/pycharm_venv_1.PNG)
 - ![PNG](../../sample/pycharm_venv_2.PNG)
 - ![PNG](../../sample/pycharm_debug_0.PNG)
+  - #### *需要將欲 Debug 的 DAG 腳本放置正確位置*
   - #### *Airflow CLI 位置*
   ```Bash
   //wsl$/Ubuntu/home/pc/airflow_venv/bin/airflow
