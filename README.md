@@ -43,13 +43,13 @@
 <br>
 
 ### *C.　Service List*
-| **項目** | **服務定位** | **服務位置** | **部署方式** |
-|:--:|:--:|:--:|:--:|
-| GitLab | Online | [8090](http:127.0.0.1:8090) | [Step.md](./GitLab/README.md) |
-| Airflow | Online | [8100](http:127.0.0.1:8100) | [Step.md](./Airflow/README.md) |
-| Airflow Standalone | Local | [8150](http:127.0.0.1:8150) | [Step.md](./Airflow/Airflow-Standalone/README.md) |
-| Grafana + Loki | Online | - | - |
-| ELK | Online | - | - |
+| **項目** | **服務定位** | **服務位置** | **部署方式** | **其他** |
+|:--:|:--:|:--:|:--:|:--:|
+| GitLab | Online | [8090](http:127.0.0.1:8090) | [Step.md](./GitLab/README.md) | - |
+| Airflow | Online | [8100](http:127.0.0.1:8100) | [Step.md](./Airflow/README.md) | - |
+| Airflow Standalone | Local | [8150](http:127.0.0.1:8150) | [Step.md](./Airflow/Airflow-Standalone/Deploy.md) | [開發說明](./Airflow/Airflow-Standalone/Dev.md) |
+| Grafana + Loki | Online | - | - | - |
+| ELK | Online | - | - | - |
 
 <br>
 
