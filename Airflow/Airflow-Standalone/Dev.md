@@ -33,8 +33,9 @@
   ```
   - #### *環境變數*
   ```Bash
-  AIRFLOW_FORCE_SLICED_DAG_CODE=True;AIRFLOW_HOME=/home/pc/airflow;PYCHARM_DISPLAY_WSL_PATHS_AS_WINDOWS=0;PYTHONUNBUFFERED=1
+  AIRFLOW_FORCE_SLICED_DAG_CODE=True;AIRFLOW_HOME=/home/pc/airflow;PYCHARM_DISPLAY_WSL_PATHS_AS_WINDOWS=0;PYTHONUNBUFFERED=1;PATH=/home/pc/airflow_venv/bin:$PATH
   ```
+- ![PNG](../../sample/ide_para.PNG)
 - #### *成功進行 Debug*
 - ![PNG](../../sample/pycharm_debug_1.PNG)
 
@@ -55,6 +56,7 @@
 
 - #### *[ 執行指令 ] 隔離測試單一 Task 的 Python 程式碼*
   ```
+  # 是否能除錯: Y
   # 寫入資料庫: N
   # 執行流程: 單一 Task
   # 適用時機: 程式碼除錯，不適用 XCom、資料庫連線
@@ -66,9 +68,13 @@
   
 - #### *[ 執行指令 ] 測試單一 Task 的完整 Airflow 行為*
   ```
+  # 是否能除錯: Y
   # 寫入資料庫: Y
   # 執行流程: 單一 Task
   # 適用時機: 測試 XCom、資料庫連線
+  
+  # 須提前執行於 WSL2 Airflow 虛擬環境中
+  airflow dags test etl_branch_xcom_demo 2025-10-27
   
   # run: 含 XCom / 資料庫寫入
   # 語法: airflow tasks run <DAG_ID> <TASK_ID> <EXECUTION_DATE>
@@ -77,6 +83,7 @@
   
 - #### *[ 執行指令 ] 觸發 Scheduler 執行整個 DAG*
   ```
+  # 是否能除錯: N
   # 寫入資料庫: Y
   # 執行流程: 完整 DAG
   # 適用時機: 模擬手動啟動
@@ -87,6 +94,7 @@
   
 - #### *[ 執行指令 ] 填補/執行歷史 DAG Run*
   ```
+  # 是否能除錯: N
   # 寫入資料庫: Y
   # 執行流程: 完整 DAG
   # 適用時機: 測試排程邏輯
