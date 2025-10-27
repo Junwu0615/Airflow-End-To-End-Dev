@@ -45,13 +45,13 @@
   ```Bash
   airflow dags list
   ```
-  - ![PNG](../../sample/airflow%20dags%20list.PNG)
+- ![PNG](../../sample/airflow%20dags%20list.PNG)
 
-- #### *Airflow Info*
+- #### *檢視 Airflow 當前配置*
   ```Bash
   airflow info
   ```
-  - ![PNG](../../sample/airflow%20info.PNG)
+- ![PNG](../../sample/airflow%20info.PNG)
 
 - #### *執行單一節點 ( 不含 XCom / 資料庫寫入 )*
   ```
