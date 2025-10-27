@@ -47,7 +47,7 @@
 |:--:|:--:|:--:|:--:|
 | GitLab | Online | [8090](http:127.0.0.1:8090) | [Step.md](./GitLab/README.md) |
 | Airflow | Online | [8100](http:127.0.0.1:8100) | [Step.md](./Airflow/README.md) |
-| Airflow Standalone | Local | [8150](http:127.0.0.1:8150) | [Step.md](./Airflow/Airflow Standalone/README.md) |
+| Airflow Standalone | Local | [8150](http:127.0.0.1:8150) | [Step.md](./Airflow/Airflow-Standalone/README.md) |
 | Grafana + Loki | Online | - | - |
 | ELK | Online | - | - |
 
