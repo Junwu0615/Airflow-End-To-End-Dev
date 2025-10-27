@@ -54,7 +54,7 @@
   ```
 - ![PNG](../../sample/airflow%20info.PNG)
 
-- #### *[ 執行指令 ] 隔離測試單一 Task 的 Python 程式碼*
+- #### *⭐[ 執行指令 ] 隔離測試單一 Task 的 Python 程式碼⭐*
   ```
   # 是否能除錯: Y
   # 寫入資料庫: N
@@ -65,7 +65,8 @@
   # 語法: airflow tasks test <DAG_ID> <TASK_ID> <EXECUTION_DATE>
   airflow tasks test etl_branch_xcom_demo extract 2025-10-27
   ```
-  
+- ![PNG](../../sample/pycharm_debug_2.PNG)
+
 - #### *[ 執行指令 ] 測試單一 Task 的完整 Airflow 行為*
   ```
   # 是否能除錯: Y

@@ -48,7 +48,8 @@
 - #### *安裝 Airflow*
   ```bash
   pip install "apache-airflow==2.9.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.1/constraints-3.11.txt"
-  pip install psycopg2-binary
+  pip install psycopg2-binary~=2.9.11
+  pip install pydevd_pycharm~=253.27864.50
   ```
   
 - #### *設定 Airflow 根目錄位置*
