@@ -80,9 +80,28 @@
 
 <br>
 
-## *⭐ 用 PyCharm + WSL + Airflow 斷點除錯指南⭐*
+## *⭐ 用 PyCharm + WSL2 + Airflow 斷點除錯指南⭐*
+- #### *腳本參數務必設置正確*
 - ![PNG](../../sample/pycharm_venv_0.PNG)
 - ![PNG](../../sample/pycharm_venv_1.PNG)
 - ![PNG](../../sample/pycharm_venv_2.PNG)
 - ![PNG](../../sample/pycharm_debug_0.PNG)
+  - #### *Airflow CLI 位置*
+  ```Bash
+  //wsl$/Ubuntu/home/pc/airflow_venv/bin/airflow
+  ```
+  - #### *腳本參數*
+  ```Bash
+  tasks test etl_branch_xcom_demo extract 2025-10-25
+  ```
+  - #### *工作目錄*
+  ```Bash
+  \\wsl$\Ubuntu\home\pc\airflow
+  ```
+  - #### *環境變數*
+  ```Bash
+  AIRFLOW_FORCE_SLICED_DAG_CODE=True;AIRFLOW_HOME=/home/pc/airflow;PYCHARM_DISPLAY_WSL_PATHS_AS_WINDOWS=0;PYTHONUNBUFFERED=1
+  ```
+- #### *成功進行 Debug*
+- ![PNG](../../sample/pycharm_debug_1.PNG)
 
