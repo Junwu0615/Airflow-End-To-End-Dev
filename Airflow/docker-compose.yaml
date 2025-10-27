@@ -88,6 +88,8 @@ x-airflow-common:
 services:
   postgres:
     image: postgres:13
+    ports:
+      - "5433:5432"
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -99,6 +101,20 @@ services:
       interval: 10s
       retries: 5
       start_period: 5s
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    ports:
+      - "5434:80"
+    env_file:
+      - .env
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
     restart: always
 
   redis:
@@ -286,3 +302,4 @@ services:
 
 volumes:
   postgres-db-volume:
+  pgadmin_data:

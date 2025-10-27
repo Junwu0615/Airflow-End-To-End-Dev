@@ -47,6 +47,8 @@
 |:--:|:--:|:--:|:--:|:--|
 | GitLab | 伺服器服務 | Online | [8090](http:127.0.0.1:8090) | [部署方式.md](./GitLab/README.md) |
 | Airflow | 伺服器服務 | Online | [8100](http:127.0.0.1:8100) | [部署方式.md](./Airflow/README.md) |
+| PostgreSQL | 伺服器服務 | Online | [5433](http:127.0.0.1:5433) | With Airflow Docker-compose |
+| PostgreSQL UI | 伺服器服務 | Online | [5434](http:127.0.0.1:5434) | With Airflow Docker-compose |
 | Airflow Standalone | 純開發環境 | Local | [8150](http:127.0.0.1:8150) | [部署方式.md](./Airflow/Airflow-Standalone/Deploy.md) \| [開發說明.md](./Airflow/Airflow-Standalone/Dev.md) |
 | Grafana + Loki | 伺服器服務 | Online | - | - |
 | ELK | 伺服器服務 | Online | - | - |
