@@ -16,7 +16,7 @@
 - #### *進入路徑 & 創建持久化空間*
   ```bash
   cd Airflow
-  md dags; md logs; md plugins; md config
+  md config; md dags; md logs; md plugins
   ```
 
 - #### *[ 可選 ] powershell 下載腳本*
@@ -41,6 +41,7 @@
   docker-compose -p etl-task-airflow up -d
   ```
 - ![PNG](../sample/airflow_up.PNG)
+- ![PNG](../sample/airflow.PNG)
 
 - #### *檢視服務是否正確啟用*
   ```bash
@@ -56,5 +57,3 @@
   ```bash
   docker volume rm $(docker volume ls -q | findstr etl-task-airflow)
   ```
-
-- ![PNG](../sample/airflow.PNG)
