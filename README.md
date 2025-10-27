@@ -44,10 +44,10 @@
 
 ### *C.　Service List*
 | **項目** | **服務定位** | **服務狀態** | **服務位置** | **說明文件** |
-|:--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|:--|
 | GitLab | 伺服器服務 | Online | [8090](http:127.0.0.1:8090) | [部署方式.md](./GitLab/README.md) |
 | Airflow | 伺服器服務 | Online | [8100](http:127.0.0.1:8100) | [部署方式.md](./Airflow/README.md) |
-| Airflow Standalone | 純開發環境 | Local | [8150](http:127.0.0.1:8150) | [部署方式.md](./Airflow/Airflow-Standalone/Deploy.md) [開發說明](./Airflow/Airflow-Standalone/Dev.md) |
+| Airflow Standalone | 純開發環境 | Local | [8150](http:127.0.0.1:8150) | [部署方式.md](./Airflow/Airflow-Standalone/Deploy.md) \| [開發說明.md](./Airflow/Airflow-Standalone/Dev.md) |
 | Grafana + Loki | 伺服器服務 | Online | - | - |
 | ELK | 伺服器服務 | Online | - | - |
 
