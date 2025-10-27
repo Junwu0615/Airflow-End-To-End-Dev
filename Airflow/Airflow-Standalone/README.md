@@ -75,10 +75,14 @@
   
 - #### *打開瀏覽器確認服務啟動*
   ```bash
-  http://localhost:8080
+  http://localhost:8150
   ```
 
+<br>
+
+## *⭐ 用 PyCharm + WSL + Airflow 斷點除錯指南⭐*
 - ![PNG](../../sample/pycharm_venv_0.PNG)
 - ![PNG](../../sample/pycharm_venv_1.PNG)
 - ![PNG](../../sample/pycharm_venv_2.PNG)
+- ![PNG](../../sample/pycharm_debug_0.PNG)
 
