@@ -42,10 +42,16 @@
 
 ## *⭐ Other ⭐*
 - #### *查閱當前環境有哪些 DAGs 腳本*
-- ![PNG](../../sample/airflow%20dags%20list.PNG)
+  ```Bash
+  airflow dags list
+  ```
+  - ![PNG](../../sample/airflow%20dags%20list.PNG)
 
 - #### *Airflow Info*
-- ![PNG](../../sample/airflow%20info.PNG)
+  ```Bash
+  airflow info
+  ```
+  - ![PNG](../../sample/airflow%20info.PNG)
 
 - #### *執行單一節點 ( 不含 XCom / 資料庫寫入 )*
   ```
