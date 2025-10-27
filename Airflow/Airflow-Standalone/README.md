@@ -24,8 +24,9 @@
   sudo apt install python3.12-venv
   sudo python3 -m venv airflow_venv
   source airflow_venv/bin/activate
-  # 此時目錄應為 : //wsl$/Ubuntu/home/pc
-  # 創建虛擬環境位置為 : //wsl$/Ubuntu/home/pc/airflow_venv
+  
+  # 此時目錄應為 : //wsl$/Ubuntu/home/your_username
+  # 創建虛擬環境位置為 : //wsl$/Ubuntu/home/your_username/airflow_venv
   ```
 - ![PNG](../../sample/linux_airflow_venv.PNG)
 
@@ -46,7 +47,7 @@
 - #### *設定 Airflow 根目錄位置*
   ```bash
   export AIRFLOW_HOME=~/airflow
-  echo $AIRFLOW_HOME # 預期輸出: /home/pc/airflow
+  echo $AIRFLOW_HOME # 預期輸出: /home/your_username/airflow
   ```
 
 - #### *初始化 Airflow 資料庫 ( 首次啟動前 )*
