@@ -13,6 +13,12 @@
 <br>
 
 ## *⭐ 用 WSL2 創建 Airflow 環境 ⭐*
+- #### *啟動 PostgreSQL Docker 容器 ( 首次啟動前 )*
+  ```bash
+  # Debug 需要進入子進程時，SQLite 無法支援多重進程操作
+  docker run --name airflow-postgres -e POSTGRES_USER=airflow -e POSTGRES_PASSWORD=airflow -e POSTGRES_DB=airflow -p 5432:5432 -d postgres:13
+  ```
+  
 - #### *PowerShell ( 管理員身分 )*
   ```bash
   wsl --install -d Ubuntu
@@ -42,6 +48,7 @@
 - #### *安裝 Airflow*
   ```bash
   pip install "apache-airflow==2.9.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.1/constraints-3.11.txt"
+  pip install psycopg2-binary
   ```
   
 - #### *設定 Airflow 根目錄位置*
@@ -65,11 +72,19 @@
     --email airflow@example.com
   ```
 
-- #### *變更預設埠*
+- #### *變更預設埠 & Debug 模式*
   ```bash
-  nano airflow/airflow.cfg
-  # web_server_port = 8080 # <-- 改為 8150
-  # 可用 VSCode 編譯器編輯
+  # 法 1: nano airflow/airflow.cfg
+  # 法 2: 可用 VSCode 編譯器編輯
+
+  # web_server_port = 8080
+  web_server_port = 8150
+  
+  # executor = SequentialExecutor
+  executor = LocalExecutor
+  
+  # sql_alchemy_conn = sqlite:////home/pc/airflow/airflow.db
+  sql_alchemy_conn = postgresql+psycopg2://airflow:airflow@localhost:5432/airflow
   ```
   
 - #### *啟動 Airflow*
