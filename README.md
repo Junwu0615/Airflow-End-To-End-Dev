@@ -56,8 +56,11 @@
 <br>
 
 ### *D.　Show Somethings*
-- #### *GitLab Commit : 將開發腳本上傳程式庫*
-- #### *Jenkins CI/CD : 確認執行情況*
-- #### *Airflow : 檢查上線版本是否出現 DAGs*
-- #### *PostgreSQL UI : 檢查資料入庫*
-- ![PNG](./sample/postgresql-ui.PNG)
+- #### *A.　當前已啟動容器項目*
+- ![PNG](./sample/all_container.PNG)
+- #### *B.　開發流程*
+  - #### *B.1　GitLab Commit : 將開發腳本上傳程式庫*
+  - #### *B.2　Jenkins CI/CD : 確認執行情況*
+  - #### *B.3　Airflow : 檢查上線版本是否出現 DAGs*
+  - #### *B.4　PostgreSQL UI : 檢查資料入庫*
+  - ![PNG](./sample/postgresql-ui.PNG)
