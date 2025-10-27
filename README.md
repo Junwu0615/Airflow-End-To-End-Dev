@@ -62,5 +62,6 @@
   - #### *B.1　GitLab Commit : 將開發腳本上傳程式庫*
   - #### *B.2　Jenkins CI/CD : 確認執行情況*
   - #### *B.3　Airflow : 檢查上線版本是否出現 DAGs*
+  - ![PNG](./sample/airflow-graph.PNG)
   - #### *B.4　PostgreSQL UI : 檢查資料入庫*
   - ![PNG](./sample/postgresql-ui.PNG)

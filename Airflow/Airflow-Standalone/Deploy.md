@@ -50,11 +50,13 @@
   pip install "apache-airflow==2.9.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.1/constraints-3.11.txt"
   pip install psycopg2-binary~=2.9.11
   pip install pydevd_pycharm~=253.27864.50
+  # pip install -r airflow/requirements.txt
   ```
   
 - #### *設定 Airflow 根目錄位置*
   ```bash
   export AIRFLOW_HOME=~/airflow
+  export PYTHONPATH=$PYTHONPATH:/home/pc/airflow
   echo $AIRFLOW_HOME # 預期輸出: /home/your_username/airflow
   ```
 
@@ -86,6 +88,12 @@
   
   # sql_alchemy_conn = sqlite:////home/pc/airflow/airflow.db
   sql_alchemy_conn = postgresql+psycopg2://airflow:airflow@localhost:5432/airflow
+  
+  # load_examples = True
+  load_examples = False
+  
+  dags_folder = /home/pc/airflow/dags # 可搜尋此行，並加入下行
+  pythonpath = /home/pc/airflow # <-- 讓 Airflow 能讀取自定義模組
   ```
   
 - #### *啟動 Airflow*

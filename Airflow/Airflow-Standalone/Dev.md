@@ -54,7 +54,16 @@
   ```
 - ![PNG](../../sample/airflow%20info.PNG)
 
-- #### *⭐[ 執行指令 ] 隔離測試單一 Task 的 Python 程式碼⭐*
+- #### *⭐ 刪除快取 & 重新讀取腳本*
+  ```Bash
+  find ~/airflow -name "__pycache__" -exec rm -rf {} +
+  airflow dags list
+  
+  # 反饋讀取錯誤之腳本
+  # airflow dags list-import-errors
+  ```
+  
+- #### *⭐ [ 執行指令 ] 隔離測試單一 Task 的 Python 程式碼 ⭐*
   ```
   # 是否能除錯: Y
   # 寫入資料庫: N
