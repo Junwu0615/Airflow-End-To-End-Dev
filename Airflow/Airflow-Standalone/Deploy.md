@@ -97,3 +97,4 @@
   ```bash
   http://localhost:8150
   ```
+- ![PNG](../../sample/airflow-standalone.PNG)

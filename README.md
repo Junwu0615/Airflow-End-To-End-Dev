@@ -55,5 +55,9 @@
 
 <br>
 
-[//]: # (### *D.　Notice*)
-[//]: # (- #### *確保已[準備部署 Images & 腳本]&#40;./note/sample_script.md&#41;*)
+### *D.　Show Somethings*
+- #### *GitLab Commit : 將開發腳本上傳程式庫*
+- #### *Jenkins CI/CD : 確認執行情況*
+- #### *Airflow : 檢查上線版本是否出現 DAGs*
+- #### *PostgreSQL UI : 檢查資料入庫*
+- ![PNG](./sample/postgresql-ui.PNG)
