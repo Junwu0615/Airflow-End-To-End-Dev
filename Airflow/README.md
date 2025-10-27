@@ -18,7 +18,18 @@
   cd Airflow
   md dags; md logs; md plugins; md config
   ```
+
+- #### *[可選] powershell 下載腳本*
+  ```bash
+  Invoke-WebRequest "https://airflow.apache.org/docs/apache-airflow/2.10.0/docker-compose.yaml" -OutFile "docker-compose.yaml"
+  ```
   
+- #### *啟動服務*
+  ```bash
+  docker-compose -p etl-task-airflow up airflow-init
+  docker-compose up airflow-init
+  ```
+
 - #### *啟動服務*
   ```bash
   docker-compose -p etl-task-airflow up -d

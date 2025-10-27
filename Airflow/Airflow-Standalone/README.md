@@ -83,7 +83,7 @@
 
 <br>
 
-## *⭐ 用 PyCharm + WSL2 + Airflow 斷點除錯指南⭐*
+## *⭐ 用 PyCharm + WSL2 + Airflow 斷點除錯指南 ⭐*
 - #### *腳本參數務必設置正確*
 - ![PNG](../../sample/pycharm_venv_0.PNG)
 - ![PNG](../../sample/pycharm_venv_1.PNG)
@@ -108,4 +108,14 @@
   ```
 - #### *成功進行 Debug*
 - ![PNG](../../sample/pycharm_debug_1.PNG)
+
+<br>
+
+## *⭐ Other ⭐*
+- #### *查閱當前環境有哪些 DAGs 腳本*
+- ![PNG](../../sample/airflow%20dags%20list.PNG)
+
+- #### *Airflow Info*
+- ![PNG](../../sample/airflow%20info.PNG)
+
 
