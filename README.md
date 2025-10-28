@@ -60,6 +60,7 @@
 - ![PNG](./sample/all_container.PNG)
 - #### *B.　開發流程*
   - #### *B.1　GitLab Commit : 將開發腳本上傳程式庫*
+  - ![PNG](./sample/gitlab_commit.PNG)
   - #### *B.2　Jenkins CI/CD : 確認執行情況*
   - #### *B.3　Airflow : 檢查上線版本是否出現 DAGs*
   - ![PNG](./sample/airflow-graph.gif)
