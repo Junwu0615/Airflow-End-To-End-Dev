@@ -12,3 +12,5 @@ Airflow/config
 GitLab/config
 GitLab/data
 GitLab/logs
+
+Jenkins/jenkins_home

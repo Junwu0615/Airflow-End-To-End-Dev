@@ -22,8 +22,9 @@
 | 部署 Airflow | 第 1 階段 | 2025-10-26 |
 | 地端開發除錯測試 | 第 1 階段 | 2025-10-27 |
 | ETL 腳本範例測試 | 第 1 階段 | 2025-10-27 |
-| Telegram Alert 機制建立 | 第 2 階段 | - |
+| 部署 Jenkins | 第 2 階段 | 2025-10-28 |
 | Jenkins CI/CD 管道建立 | 第 2 階段 | - |
+| Telegram Alert 機制建立 | 第 2 階段 | - |
 | 部署 Grafana + Loki | 第 3 階段 | - |
 | Grafana + Loki 監控機制建立 | 第 3 階段 | - |
 | 部署 ELK | 第 3 階段 | - |
@@ -50,6 +51,7 @@
 | PostgreSQL | 伺服器服務 | Online | [5433](http:127.0.0.1:5433) | With Airflow Docker-compose |
 | PostgreSQL UI | 伺服器服務 | Online | [5434](http:127.0.0.1:5434) | With Airflow Docker-compose |
 | Airflow Standalone | 純開發環境 | Local | [8150](http:127.0.0.1:8150) | [部署方式.md](./Airflow/Airflow-Standalone/Deploy.md) \| [開發說明.md](./Airflow/Airflow-Standalone/Dev.md) |
+| Jenkins | 伺服器服務 | Online | [8095](http:127.0.0.1:8095) | - |
 | Grafana + Loki | 伺服器服務 | Online | - | - |
 | ELK | 伺服器服務 | Online | - | - |
 
