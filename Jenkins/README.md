@@ -12,7 +12,7 @@
 
 <br>
 
-## *⭐ Docker Build In WSL2 ⭐*
+## *⭐ 用 WSL2 創建 Jenkins 服務 ⭐*
 - #### *進入路徑 & 創建持久化空間*
   ```bash
   cd Jenkins
