@@ -51,7 +51,7 @@
 | PostgreSQL | 伺服器服務 | Online | [5433](http:127.0.0.1:5433) | With Airflow Docker-compose |
 | PostgreSQL UI | 伺服器服務 | Online | [5434](http:127.0.0.1:5434) | With Airflow Docker-compose |
 | Airflow Standalone | 純開發環境 | Local | [8150](http:127.0.0.1:8150) | [部署方式.md](./Airflow/Airflow-Standalone/Deploy.md) \| [開發說明.md](./Airflow/Airflow-Standalone/Dev.md) |
-| Jenkins | 伺服器服務 | Online | [8095](http://127.0.0.1:8095/jenkins) | - |
+| Jenkins | 伺服器服務 | Online | [8095](http://127.0.0.1:8095/jenkins) | [部署方式.md](./Jenkins/README.md) |
 | Grafana + Loki | 伺服器服務 | Online | - | - |
 | ELK | 伺服器服務 | Online | - | - |
 

@@ -37,10 +37,10 @@
   
 - #### *查看初始化密碼*
   ```bash
-  docker volume rm $(docker volume ls -q | findstr etl-task-jenkins)
+  docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
   ```
 
-- #### *Jenkins Plugin 必裝清單*
+- #### *Jenkins Plugin 必裝清單 ( 無腦選擇推薦安裝 )*
   | 插件名稱 | 用途 |
   | :-- | :-- |
   | Git plugin | 從 GitLab 拉原始碼 |
@@ -49,6 +49,8 @@
   | SSH Agent plugin | 用 SSH 部署至 Airflow |
   | Credentials Binding plugin | 管理 Token / SSH key |
   | Blue Ocean [可選] | 視覺化 Pipeline 介面 |
+- ![PNG](../sample/jenkins_1.PNG)
+
 
 - #### *確認主機能從 Jenkins 登入 Airflow Server*
   ```bash
