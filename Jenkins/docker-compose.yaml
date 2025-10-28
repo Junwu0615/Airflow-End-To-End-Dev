@@ -12,9 +12,10 @@ services:
       - JENKINS_OPTS=--prefix=/jenkins
     user: root
     volumes:
-      - ./jenkins_home:/var/jenkins_home           # Jenkins 資料持久化
-      - /var/run/docker.sock:/var/run/docker.sock  # (可選) 若 Jenkins 要啟容器
-      - ~/.ssh:/root/.ssh:ro                       # 允許 Jenkins 用你的 SSH key 登入 Airflow Server
+      - ../Airflow:/jenkins-workspace/airflow-project:rw  # 確保路徑與 Airflow 外部路徑匹配
+      - ./jenkins_home:/var/jenkins_home                  # Jenkins 資料持久化
+      - /var/run/docker.sock:/var/run/docker.sock         # (可選) 若 Jenkins 要啟容器
+#      - ~/.ssh:/root/.ssh:ro                             # 允許 Jenkins 用你的 SSH key 登入 Airflow Server
     networks:
       - ci_net
 

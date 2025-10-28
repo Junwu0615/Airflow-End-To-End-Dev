@@ -52,15 +52,25 @@
 - ![PNG](../sample/jenkins_1.PNG)
 
 
-- #### *確認主機能從 Jenkins 登入 Airflow Server*
-  ```bash
-  ssh airflow@192.168.0.158
-  ```
-  
-- #### *在 Jenkins → Manage Jenkins → Credentials → Global 新增*
-  ```bash
-  # 類型：SSH Username with private key
-  # ID：airflow-server-key
-  # Username：airflow
-  # Private Key：貼上私鑰內容（或勾「From Jenkins master ~/.ssh」）
-  ```
+[//]: # (- #### *確認主機能從 Jenkins 登入 Airflow Server*)
+
+[//]: # (  ```bash)
+
+[//]: # (  ssh airflow@192.168.0.158)
+
+[//]: # (  ```)
+
+[//]: # (  )
+[//]: # (- #### *在 Jenkins → Manage Jenkins → Credentials → Global 新增*)
+
+[//]: # (  ```bash)
+
+[//]: # (  # 類型：SSH Username with private key)
+
+[//]: # (  # ID：airflow-server-key)
+
+[//]: # (  # Username：airflow)
+
+[//]: # (  # Private Key：貼上私鑰內容（或勾「From Jenkins master ~/.ssh」）)
+
+[//]: # (  ```)
