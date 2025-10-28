@@ -6,7 +6,7 @@ services:
     container_name: jenkins
     restart: always
     ports:
-      - '8091:8080'   # Jenkins Web UI
+      - '8095:8080'   # Jenkins Web UI
       - '50000:50000' # Jenkins agent 通訊
     environment:
       - JENKINS_OPTS=--prefix=/jenkins
