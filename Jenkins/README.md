@@ -51,26 +51,35 @@
   | Blue Ocean [可選] | 視覺化 Pipeline 介面 |
 - ![PNG](../sample/jenkins_1.PNG)
 
+- #### *確認是否安裝 Gitlab 插件*
+- ![PNG](../sample/jenkins_2.PNG)
 
-[//]: # (- #### *確認主機能從 Jenkins 登入 Airflow Server*)
+- #### *設定使用者設定，即完成*
+  ```bash
+  Account: admin
+  Password: admin_pass
+  Email: admin@example.com
+  ```
+  
+<br>
 
-[//]: # (  ```bash)
-
-[//]: # (  ssh airflow@192.168.0.158)
-
-[//]: # (  ```)
-
-[//]: # (  )
-[//]: # (- #### *在 Jenkins → Manage Jenkins → Credentials → Global 新增*)
-
-[//]: # (  ```bash)
-
-[//]: # (  # 類型：SSH Username with private key)
-
-[//]: # (  # ID：airflow-server-key)
-
-[//]: # (  # Username：airflow)
-
-[//]: # (  # Private Key：貼上私鑰內容（或勾「From Jenkins master ~/.ssh」）)
-
-[//]: # (  ```)
+## *⭐ 設定 Webhook 模式 ⭐*
+- #### *⭐ 架構概念 ⭐*
+  ```Bash
+  GitLab [push / merge]
+  
+       ↓  Webhook [Trigger]
+  
+  Jenkins [CI/CD Pipeline]
+  
+       ↓  SSH Deploy
+  
+  Airflow Server [Copy DAGs & Other File → /opt/airflow]
+  ``` 
+  
+- #### *新增作業步驟*
+  - ![PNG](../sample/jenkins_11.jpg)
+    ```Bash
+    來自 Gitlab 專案 Hello World 發生 Commit 動作，間接觸法 Jenkins CI/CD 流程
+    ``` 
+  - ![PNG](../sample/jenkins_12.jpg)

@@ -8,6 +8,9 @@ Airflow/dags
 Airflow/logs
 Airflow/plugins
 Airflow/config
+Airflow/airflow-webserver.pid
+Airflow/airflow.cfg
+Airflow/webserver_config.py
 
 GitLab/config
 GitLab/data
