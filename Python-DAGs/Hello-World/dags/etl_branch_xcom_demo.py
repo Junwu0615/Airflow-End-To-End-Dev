@@ -1,3 +1,9 @@
+import os, sys
+# [1] 獲取當前 DAG 檔案的目錄 (即 /opt/airflow/dags)
+# [2] 獲取 DAG 目錄的父目錄 (即 /opt/airflow/)
+# [3] 將父目錄加入到 Python 搜尋路徑中，這樣就能找到 lib/
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from datetime import timedelta
 
 from airflow import DAG

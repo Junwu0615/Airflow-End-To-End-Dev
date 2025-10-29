@@ -1,0 +1,53 @@
+pipeline {
+    agent any
+
+    environment {
+        REPO_DIR = "."
+//         DOCKER_AIRFLOW_NAME = "airflow_webserver_1" // 確保這是您的容器名稱
+        DOCKER_AIRFLOW_NAME = "etl-task-airflow-airflow-webserver-1"
+        DEPLOY_TARGET_DIR = "/jenkins-workspace/airflow-project" // Jenkins 容器內掛載的共享卷路徑
+    }
+
+    stages {
+        // [可選] CI 階段
+
+        // [重點] CD 階段
+        stage('Deploy Files via Docker Volume') {
+            when { expression { currentBuild.currentResult == 'SUCCESS' } }
+            steps {
+                sh """
+                echo "📦 Deploying files to shared volume..."
+
+                # 1. 複製 dags/ 內容到共享目錄
+                cp -Rf ${REPO_DIR}/dags/* ${DEPLOY_TARGET_DIR}/dags/
+
+                # 2. 複製 lib/ 內容到共享目錄
+                cp -Rf ${REPO_DIR}/lib/* ${DEPLOY_TARGET_DIR}/lib/
+
+                echo "✅ Deployment successful."
+                """
+            }
+        }
+
+        stage('Trigger Airflow DAG') {
+            when { expression { currentBuild.currentResult == 'SUCCESS' } }
+            steps {
+                sh """
+                echo "⏳ Waiting for Airflow Scheduler to parse DAG (15 seconds)..."
+                # 關鍵修正 3: 增加等待時間 (15 秒)，讓 Airflow 載入新 DAG，避免 DagNotFound
+                sleep 15
+
+                echo "🚀 Unpausing and Triggering DAG: etl_branch_xcom_demo"
+
+                # 關鍵修正 4: 先 unpause 確保 DAG 處於活動狀態，並強制 Airflow 檢查
+                docker exec ${DOCKER_AIRFLOW_NAME} airflow dags unpause etl_branch_xcom_demo
+
+                # 5. 觸發 DAG
+                docker exec ${DOCKER_AIRFLOW_NAME} airflow dags trigger etl_branch_xcom_demo
+
+                echo "✅ Airflow Trigger command sent."
+                """
+            }
+        }
+    }
+}

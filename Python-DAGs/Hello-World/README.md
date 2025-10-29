@@ -19,11 +19,9 @@ Hello-World/
 │   ├── init_db.py                 # 測試前初始化資料庫
 │   └── test_etl_processor.py
 │
-├── jenkins/
-│   └── Jenkinsfile                # CI / CD Pipeline
-│
 ├── .env
 ├── .gitignore
+├── Jenkinsfile                    # CI / CD Pipeline
 ├── README.md
 └── requirements.txt
 ```
