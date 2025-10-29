@@ -8,6 +8,7 @@ Airflow/dags
 Airflow/logs
 Airflow/plugins
 Airflow/config
+Airflow/lib
 Airflow/airflow-webserver.pid
 Airflow/airflow.cfg
 Airflow/webserver_config.py

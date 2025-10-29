@@ -39,6 +39,13 @@
   ```bash
   docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
   ```
+  
+- #### *安裝可執行 Docker 指令環境*
+  ```bash
+  docker exec -it jenkins bash
+  apt-get update
+  apt-get install -y docker.io
+  ```
 
 - #### *Jenkins Plugin 必裝清單 ( 無腦選擇推薦安裝 )*
   | 插件名稱 | 用途 |

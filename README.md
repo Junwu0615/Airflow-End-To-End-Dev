@@ -66,6 +66,8 @@
   - ![PNG](./sample/gitlab_commit.PNG)
   - #### *B.2　Jenkins CI/CD : 確認執行情況*
   - ![PNG](./sample/gitlab_runner_6.PNG)
+  - ![PNG](./sample/jenkins_3.PNG)
+  - ![PNG](./sample/jenkins_4.PNG)
   - #### *B.3　Airflow : 檢查上線版本是否出現 DAGs*
   - ![PNG](./sample/airflow-graph.gif)
   - #### *B.4　PostgreSQL UI : 檢查資料入庫*

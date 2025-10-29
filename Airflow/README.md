@@ -16,7 +16,7 @@
 - #### *進入路徑 & 創建持久化空間*
   ```bash
   cd Airflow
-  md config; md dags; md logs; md plugins
+  md config; md dags; md logs; md plugins; md lib
   ```
 
 - #### *[ 可選 ] powershell 下載腳本*
