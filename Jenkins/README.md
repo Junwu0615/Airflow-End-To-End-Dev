@@ -66,34 +66,41 @@
 
 ## *⭐ 單一專案如何建立 CI/CD Pipline ⭐*
 - #### *⭐ Gitlab Runner + Docker Volume 架構概念 ⭐*
-  ```Bash
-  # 單一環境啟太多服務 無法用 Webhook 觸發部署
-  # 改用 Gitlab Runner 觸發 Jenkins 部署
-  
-  GitLab [push / merge]
-  
-       ↓  Gitlab Runner CI [Trigger]
-  
-  Jenkins CD
-  
-       ↓  Docker Volume Copy
-  
-  Airflow CLI Trigger
-  ``` 
-  
+    ```Bash
+    # 單一環境啟太多服務 無法用 Webhook 觸發部署
+    # 改用 Gitlab Runner 觸發 Jenkins 部署
+    
+    GitLab [push / merge]
+    
+         ↓  Gitlab Runner CI [Trigger]
+    
+    Jenkins CD
+    
+         ↓  Docker Volume Copy
+    
+    Airflow CLI Trigger
+    ``` 
+
+- #### *設定 Jenkins Token*
+  - ![PNG](../sample/jenkins_17.jpg)
+      ```Bash
+      # 最後觸發路徑如下
+      http://192.168.0.158:8095/job/Hello-World-ETL/build?token=???
+      ``` 
+
+- #### *設定全域 Gitlab 設定*
+  - ![PNG](../sample/jenkins_18.jpg)
+  - ![PNG](../sample/jenkins_19.jpg)
+  - ![PNG](../sample/jenkins_20.jpg)
+
 - #### *新增作業步驟*
   - ![PNG](../sample/jenkins_11.jpg)
     ```Bash
-    來自 Gitlab 專案 Hello World 發生 Commit 動作，間接觸法 Jenkins CI/CD 流程
+    # 來自 Gitlab 專案 Hello World 發生 Commit 動作，間接觸法 Jenkins CI/CD 流程
+    來自 Gitlab 專案 Hello World 發生 Commit 動作，觸法 Gitlab CI 完成後，接著 Jenkins CD 流程
     ``` 
   - ![PNG](../sample/jenkins_12.jpg)
-
-- #### *設定 Jenkins Token*
-- ![PNG](../sample/jenkins_17.jpg)
-    ```Bash
-    # 最後觸發路徑如下
-    http://192.168.0.158:8095/job/Hello-World-ETL/build?token=???
-    ``` 
+  - ![PNG](../sample/jenkins_21.jpg)
 
 - #### *在 WSL2 啟動 [Gitlab Runner](../GitLab-Runner/README.md)*
 
