@@ -23,6 +23,7 @@
 | 地端開發除錯測試 | 第 1 階段 | 2025-10-27 |
 | ETL 腳本範例測試 | 第 1 階段 | 2025-10-27 |
 | 部署 Jenkins | 第 2 階段 | 2025-10-28 |
+| 啟動 Gitlab Runner | 第 2 階段 | 2025-10-28 |
 | Jenkins CI/CD 管道建立 | 第 2 階段 | - |
 | Telegram Alert 機制建立 | 第 2 階段 | - |
 | 部署 Grafana + Loki | 第 3 階段 | - |
@@ -64,6 +65,7 @@
   - #### *B.1　GitLab Commit : 將開發腳本上傳程式庫*
   - ![PNG](./sample/gitlab_commit.PNG)
   - #### *B.2　Jenkins CI/CD : 確認執行情況*
+  - ![PNG](../sample/gitlab_runner_6.PNG)
   - #### *B.3　Airflow : 檢查上線版本是否出現 DAGs*
   - ![PNG](./sample/airflow-graph.gif)
   - #### *B.4　PostgreSQL UI : 檢查資料入庫*

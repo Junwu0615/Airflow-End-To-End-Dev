@@ -49,11 +49,23 @@
 - #### *檢視服務是否呈現綠點*
 - ![PNG](../sample/gitlab_runner_0.PNG)
 
+- #### *確認是否打勾 `Run untagged jobs`*
+- ![PNG](../sample/gitlab_runner_3.PNG)
+- ![PNG](../sample/gitlab_runner_4.PNG)
+
 - #### *檢視服務運行狀況*
   ```bash
   sudo service gitlab-runner status
   ```
 
+- #### *找出 WSL2 宿主機 Gateway IP*
+  ```bash
+  # 在 WSL2 終端機運行
+  cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
+  
+  ex: 172.28.112.1
+  ```
+  
 - #### *檢視服務是否能正確連接到 Gitlab*
   ```bash
   sudo nano /etc/gitlab-runner/config.toml
@@ -63,3 +75,7 @@
   ```
 - ![PNG](../sample/gitlab_runner_1.PNG)
 - ![PNG](../sample/gitlab_runner_2.PNG)
+
+- #### *測試 Gitlab CI 是否正常運行*
+- ![PNG](../sample/gitlab_runner_5.PNG)
+- ![PNG](../sample/gitlab_runner_6.PNG)
