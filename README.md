@@ -64,7 +64,7 @@
 - #### *B.　開發流程*
   - #### *B.1　GitLab Commit : 將開發腳本上傳程式庫*
   - ![PNG](./sample/gitlab_commit.PNG)
-  - #### *B.2　Jenkins CI/CD : 確認執行情況*
+  - #### *B.2　GitLab CI + Jenkins CI/CD : 確認執行情況*
   - ![PNG](./sample/gitlab_runner_6.PNG)
   - ![PNG](./sample/jenkins_3.PNG)
   - ![PNG](./sample/jenkins_4.PNG)
@@ -72,3 +72,4 @@
   - ![PNG](./sample/airflow-graph.gif)
   - #### *B.4　PostgreSQL UI : 檢查資料入庫*
   - ![PNG](./sample/postgresql-ui.PNG)
+  - #### *B.5　[Demo Video](https://drive.google.com/file/d/1XuNN56RM18Pj6m_x9j-1eeA2fIR26WJQ/view?usp=sharing)*
