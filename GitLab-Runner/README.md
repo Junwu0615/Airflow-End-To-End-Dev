@@ -45,3 +45,21 @@
   # 5. 執行器類型: docker
   # 6. Docker 映像: alpine:latest
   ```
+
+- #### *檢視服務是否呈現綠點*
+- ![PNG](../sample/gitlab_runner_0.PNG)
+
+- #### *檢視服務運行狀況*
+  ```bash
+  sudo service gitlab-runner status
+  ```
+
+- #### *檢視服務是否能正確連接到 Gitlab*
+  ```bash
+  sudo nano /etc/gitlab-runner/config.toml
+  
+  # 若有進行變更，請重啟服務
+  sudo gitlab-runner restart
+  ```
+- ![PNG](../sample/gitlab_runner_1.PNG)
+- ![PNG](../sample/gitlab_runner_2.PNG)
