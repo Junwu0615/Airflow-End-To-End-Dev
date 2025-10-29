@@ -1,0 +1,20 @@
+stages:
+  - deploy_jenkins
+
+jenkins_deploy_trigger:
+  stage: deploy_jenkins
+  image: curlimages/curl:latest
+  variables:
+    GIT_STRATEGY: none
+    JENKINS_SERVER_PATH: http://172.28.112.1:8095
+    JENKINS_USER: admin
+    JENKINS_API_TOKEN: 11d3e205b48f72ea0499401947aa563918
+
+  script: |
+    echo "Triggering Jenkins Job: Hello-World-ETL ..." && \
+    curl -X POST -u "${JENKINS_USER}:${JENKINS_API_TOKEN}" \
+      "${JENKINS_SERVER_PATH}/jenkins/job/Hello-World-ETL/build?token=${JENKINS_API_TOKEN}&cause=GitLab+Push+Triggered"
+
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: on_success
