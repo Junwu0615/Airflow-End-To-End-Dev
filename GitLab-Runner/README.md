@@ -79,3 +79,23 @@
 - #### *測試 Gitlab CI 是否正常運行*
 - ![PNG](../sample/gitlab_runner_5.PNG)
 - ![PNG](../sample/gitlab_runner_6.PNG)
+
+- #### *如何關閉 Gitlab-Runner 常駐服務*
+  ```bash
+  # [可選] 很酷的資源監視工具
+  sudo apt update
+  sudo apt install htop -y
+  htop
+  
+  # 檢視 Running 服務清單
+  systemctl list-units --type=service --state=running
+  
+  # 暫停服務 
+  sudo systemctl stop gitlab-runner
+  
+  # 檢視指定服務狀態
+  sudo systemctl status gitlab-runner
+
+  # 關閉常駐服務以解放占用記憶體 # 重啟 WSL2 時才會生效
+  sudo systemctl disable gitlab-runner
+  ```
