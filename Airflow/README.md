@@ -48,9 +48,21 @@
   docker ps -a
   ```
 
-- #### *關閉服務*
+- #### *關閉服務 ( 一般關閉 )*
   ```bash
   docker-compose -p etl-task-airflow down
+  ```
+
+- #### *⭐ 強力清理指令 ( 三步驟 )⭐*
+  ```bash
+  # 停止、移除容器、移除沒定義的孤兒、連同資料庫內容(Volumes)一起清空
+  docker-compose -p etl-task-airflow down --volumes --remove-orphans
+
+  # 清理所有「已停止」的容器
+  docker container prune -f
+  
+  # 清理所有「未被掛載」的 Volume
+  docker volume prune -f
   ```
   
 - #### *[ 注意 ] 清除相關所有 Volume*
