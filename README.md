@@ -15,7 +15,7 @@
 ## *⭐ Airflow-End-To-End-Dev ⭐*
 
 ### *A.　Current Progress*
-|**項目**|**敘述**|**完成時間**|
+|**Item**|**Description**|**Time**|
 |:--:|:--:|:--:|
 | 專案上架 | - | 2025-10-26 |
 | 部署 GitLab | 第 1 階段 | 2025-10-26 |
@@ -31,6 +31,8 @@
 | 部署 ELK | 第 3 階段 | - |
 | ELK 監控機制建立 | 第 3 階段 | - |
 | ??? | 第 4 階段 | - |
+| 加入 Terraform | VM / Network / Storage | - |
+| 建立 Makefile | 整套 lab 一鍵部署 | - |
 
 <br>
 
@@ -53,23 +55,40 @@
 | PostgreSQL UI | 伺服器服務 | Online | [5434](http:127.0.0.1:5434) | With Airflow Docker-compose |
 | Airflow Standalone | 純開發環境 | Local | [8150](http:127.0.0.1:8150) | [部署方式.md](./Airflow/Airflow-Standalone/Deploy.md) \| [開發說明.md](./Airflow/Airflow-Standalone/Dev.md) |
 | Jenkins | 伺服器服務 | Online | [8095](http://127.0.0.1:8095/jenkins) | [部署方式.md](./Jenkins/README.md) |
-| Grafana + Loki | 伺服器服務 | Online | - | - |
+| Grafana | 伺服器服務 | Online | - | - |
+| Loki | 伺服器服務 | Online | - | - |
 | ELK | 伺服器服務 | Online | - | - |
 
 <br>
 
-### *D.　Show Somethings*
-- #### *A.　當前已啟動容器項目*
+### *D.　Data Platform Lifecycle*
+```
+1. Local Dev ( Airflow Standalone )
+     │
+     ▼
+2. GitLab CI
+     │
+     ▼
+3. Jenkins CD
+     │
+     ▼
+4. Airflow Platform
+     │
+     ▼
+5. Observability Stack
+```
+
+- #### *a.　當前已啟動容器項目*
 - ![PNG](./sample/all_container.PNG)
-- #### *B.　開發流程*
-  - #### *B.1　GitLab Commit : 將開發腳本上傳程式庫*
+- #### *b.　開發流程*
+  - #### *b.1.　GitLab Commit : 將開發腳本上傳程式庫*
   - ![PNG](./sample/gitlab_commit.PNG)
-  - #### *B.2　GitLab CI + Jenkins CI/CD : 確認執行情況*
+  - #### *b.2.　GitLab CI + Jenkins CI/CD : 確認執行情況*
   - ![PNG](./sample/gitlab_runner_6.PNG)
   - ![PNG](./sample/jenkins_3.PNG)
   - ![PNG](./sample/jenkins_4.PNG)
-  - #### *B.3　Airflow : 檢查上線版本是否出現 DAGs*
+  - #### *b.3.　Airflow : 檢查上線版本是否出現 DAGs*
   - ![PNG](./sample/airflow-graph.gif)
-  - #### *B.4　PostgreSQL UI : 檢查資料入庫*
+  - #### *b.4.　PostgreSQL UI : 檢查資料入庫*
   - ![PNG](./sample/postgresql-ui.PNG)
-  - #### *B.5　[Demo Video](https://drive.google.com/file/d/1XuNN56RM18Pj6m_x9j-1eeA2fIR26WJQ/view?usp=sharing)*
+  - #### *b.5.　[Demo Video](https://drive.google.com/file/d/1XuNN56RM18Pj6m_x9j-1eeA2fIR26WJQ/view?usp=sharing)*
